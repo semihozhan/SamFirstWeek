@@ -1,0 +1,45 @@
+﻿@using SamFirstWeek.Models;
+@using System.Web;
+@model HomeViewModel
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <table>
+                <tr><td>Basic Count</td><td>Date</td></tr>
+                @foreach (KeyValuePair<int, string> item in Model.basic)
+                {
+                    <tr><td>@item.Key</td><td>@item.Value</td></tr>
+                }
+            </table>
+        </div>
+        <div class="col-sm">
+            <table>
+                <tr><td>Delux Count</td><td>Date</td></tr>
+                @foreach (KeyValuePair<int, string> item in Model.delux)
+                {
+                    <tr><td>@item.Key</td><td>@item.Value</td></tr>
+                }
+            </table>
+        </div>
+        <div class="col-sm">
+            <table>
+                <tr><td>Total Price</td><td>Date</td></tr>
+                @foreach (KeyValuePair<int, string> item in Model.total)
+                {
+                    <tr><td>@item.Key</td><td>@item.Value</td></tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
